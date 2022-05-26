@@ -45,11 +45,11 @@ void Graph::BFS(int startVertex)
 	queue.push_back(startVertex);
 
 	list<int>::iterator i;
-
+	cout<<"BFS: ";
 	while (!queue.empty())
 	{
 		int currVertex = queue.front();
-		cout << "Visited " << currVertex << " ";
+		cout << currVertex << " ";
 		queue.pop_front();
 
 		for (i = adjLists[currVertex].begin(); i != adjLists[currVertex].end(); ++i)
@@ -70,11 +70,11 @@ int main()
 	g.addEdge(0, 1);
 	g.addEdge(0, 2);
 	g.addEdge(1, 2);
-	g.addEdge(2, 0);
+	// g.addEdge(2, 0);
 	g.addEdge(2, 3);
 	g.addEdge(3, 3);
 
-	g.BFS(2);
+	g.BFS(3);
 
 	return 0;
 }
