@@ -9,7 +9,7 @@ class Graph
 {
 public:
     map<int, bool> visited;
-    map<int, list<int>> adj;
+    map< int, list<int> > adj;
 
     // function to add an edge to graph
     void addEdge(int v, int w);
